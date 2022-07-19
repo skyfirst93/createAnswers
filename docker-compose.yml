@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    command: redis-server --requirepass password01
+    #volumes:
+     # - redis:/var/lib/redis/data
+     # - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
